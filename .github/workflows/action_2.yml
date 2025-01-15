@@ -14,8 +14,10 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
           cache: maven
+      - name: Move to project gh-actions-1
+        run: cd gh-actions-1
       - name: Build
-        run: mvn package
+        run: mvn package -X
       - name: Run Test
         run: mvn test
 
