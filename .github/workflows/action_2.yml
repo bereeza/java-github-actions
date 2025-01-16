@@ -1,6 +1,6 @@
 name: 2 action
 
-on: push
+on: workflow_dispatch
 
 jobs:
   test:
