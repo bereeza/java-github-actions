@@ -1,5 +1,5 @@
 name: action_3.yml
-on: push
+on: workflow_dispatch
 
 jobs:
   run:
@@ -17,6 +17,7 @@ jobs:
         working-directory: gh-actions-1
         run: mvn test
   deploy:
+    needs: [run]
     runs-on: ubuntu-latest
     steps:
       - name: Deploy to GCP
