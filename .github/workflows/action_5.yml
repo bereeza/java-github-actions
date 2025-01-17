@@ -1,0 +1,14 @@
+name: action_5.yml
+on:
+  pull_request:
+#    types: [opened, edited]
+    types:
+      - opened
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy
+        run: echo "Deploy..."
