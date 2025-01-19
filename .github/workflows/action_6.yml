@@ -10,5 +10,4 @@ jobs:
         with:
           name: deploy artifacts
           path: |
-            ./artifacts
-            ./README.md
+            text.txt
