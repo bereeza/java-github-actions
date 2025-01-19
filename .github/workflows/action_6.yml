@@ -6,8 +6,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Deploy
-        run: echo "Deploy..."
+        uses: actions/upload-artifact@v3
         with:
           name: deploy artifacts
           path:
             artifacts
+            README.md
