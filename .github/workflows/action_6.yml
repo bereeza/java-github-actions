@@ -1,0 +1,13 @@
+name: Artifacts
+on: workflow_dispatch
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy
+        run: echo "Deploy..."
+        with:
+          name: deploy artifacts
+          path:
+            artifacts
