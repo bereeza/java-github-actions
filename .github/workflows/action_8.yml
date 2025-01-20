@@ -1,0 +1,13 @@
+name: env variable
+on: workflow_dispatch
+
+env:
+  VARIABLE: "Text"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print env variable
+        run: |
+          echo "env variable: ${{ env.VARIABLE}}"
