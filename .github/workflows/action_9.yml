@@ -1,0 +1,15 @@
+name: github secrets
+on: workflow_dispatch
+
+jobs:
+  build:
+    env:
+      DB_USERNAME: ${{ secrets.DB_USERNAME }}
+      DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print secrets
+        run: |
+          echo "Step 1"
+          echo "db config: ${{env.DB_PASSWORD}} & ${{env.DB_USERNAME}}" 
+          echo "Step 2"
