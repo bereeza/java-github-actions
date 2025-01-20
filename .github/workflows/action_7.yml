@@ -9,12 +9,14 @@ jobs:
         uses: actions/checkout@v3
 
       - name: java config
+        working-directory: gh-actions-1
         uses: actions/setup-java@v3
         with:
           distribution: "temurin"
           java-version: "21"
 
       - name: cache maven rep
+        working-directory: gh-actions-1
         uses: actions/cache@v3
         with:
           path: ~/.m2/repository
@@ -23,4 +25,5 @@ jobs:
             ${{ runner.os }}-maven-
 
       - name: build maven
+        working-directory: gh-actions-1
         run: mvn clean verify
