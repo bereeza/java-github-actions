@@ -1,0 +1,13 @@
+name: simple if statement
+on: workflow_dispatch
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: print hello
+        run: echo "Hello"
+
+      - name: if test
+        if: 1==1
+        run: echo "if statement is true"
