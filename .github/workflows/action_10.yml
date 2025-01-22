@@ -17,7 +17,7 @@ jobs:
 
   report:
     needs: [test]
-    if: failure()
+    if: always()
     runs-on: ubuntu-latest
     steps:
       - name: print error
