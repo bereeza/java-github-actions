@@ -8,4 +8,4 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       - name: Reusing reusable workflow
-        uses: ./.github/workflows/action_1.yml
+        uses: bereeza/java-github-actions/.github/workflows/action_1.yml@main
