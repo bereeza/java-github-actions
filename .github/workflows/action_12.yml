@@ -1,0 +1,9 @@
+name: using reusable workflow
+on: workflow_dispatch
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: reusing
+        uses: ./.github/workflows/action_1.yml
