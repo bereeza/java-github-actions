@@ -3,4 +3,4 @@ on: workflow_dispatch
 
 jobs:
   deploy:
-    uses: ./.github/workflows/action_1.yml@main
+    uses: ./.github/workflows/action_1.yml
