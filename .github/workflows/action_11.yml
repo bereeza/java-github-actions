@@ -1,0 +1,22 @@
+name: matrix strategy
+on: workflow_dispatch
+
+jobs:
+  build:
+    strategy:
+      matrix:
+        java-version: [21]
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      - name: java config
+        uses: actions/setup-java@v3
+        with:
+          distribution: "temurin"
+          java-version: ${{ matrix.java-version }}
+          cache: maven
+      - name: build maven
+        working-directory: gh-actions-1
+        run: mvn clean verify
