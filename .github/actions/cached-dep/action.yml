@@ -1,0 +1,13 @@
+name: cached-dep
+author: bereeza
+description: cached-dep
+runs:
+  using: 'composite'
+  steps:
+    - name: cache dependencies
+      id: cache
+      uses: actions/setup-java@v4
+      with:
+        java-version: '19'
+        distribution: 'temurin'
+        cache: maven
