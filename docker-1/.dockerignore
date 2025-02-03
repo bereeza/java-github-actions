@@ -1,0 +1,3 @@
+# example of docker ignore file
+.mvn
+*.md
