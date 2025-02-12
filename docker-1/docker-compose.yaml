@@ -1,0 +1,6 @@
+version: "3.8"
+
+services:
+  java-project:
+    # build by Dockerfile (./ - current dir)
+    build: ./
